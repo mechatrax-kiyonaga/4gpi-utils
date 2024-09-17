@@ -4,7 +4,7 @@
 #
 VERSION="3.2"
 
-GPIOCHIP=$(gpiodetect | awk '/pinctrl/{print $1}')
+GPIOCHIP=$(gpiodetect | awk '/pinctrl/{print $1}' | head -1)
 TIMEOUT=40
 HARD=0
 CONFIG=/etc/default/4gpi
